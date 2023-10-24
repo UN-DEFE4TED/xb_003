@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', cursive;
+}
+body>.fa-arrow-left{
+    color: red;
+    font-size: 150%;
+    z-index: 4;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+.back{
+    top: 30px;
+    left: 30px;
+    color: red;
+    font-size: 150%;
+    position: fixed;
+    cursor: pointer;
+}
+.img{
+    height: 180px;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+}
+.img::after{
+    left: 0;
+    right: 0;
+    content: "";
+    bottom: -75px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fffefe;
+}
+.form{
+    z-index: 12;
+    margin-top: -10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+.form #text{
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+.form form input{
+    width: 200px;
+    border: none;
+    padding: 7px;
+    outline: none;
+    font-size: 110%;
+    margin: 10px 10px 20px 10px;
+    border-bottom: 2px solid gray;
+}
+.form .login {
+    margin-top: -15px;
+    text-align: end;
+    padding: 0 20px;
+}
+.form .submit_btn button:hover{
+    background-color: #c23a09;
+}
+.form .submit_btn button{
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 105%;
+    font-weight: 600;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ff4e0d;
+
+}
+.form .submit_btn{
+    text-align: center;
+}
+.form .next_btn{
+    margin-top: 20px;
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: end;
+    /* background-color: firebrick; */
+}
+.form .next:hover{
+    background-color: #166189;
+}
+.form .next{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 170%;
+    border-radius: 50px;
+    place-items: center;
+    text-decoration: none;
+    background-color: #1f8dc8;
+}
+.form .prev:hover{
+    background-color: #7d1919;
+}
+.form .prev{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    color: white;
+    cursor: pointer;
+    font-size: 170%;
+    border-radius: 50px;
+    place-items: center;
+    text-decoration: none;
+    background-color: #b22323;
+}
+.form .pg_2, .pg_3{
+    display: none;
+}

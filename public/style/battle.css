@@ -1,0 +1,114 @@
+.battle{
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+
+.battle>.battleBox{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #d9d9d9;
+}
+.battle>.battleBox .header{
+    display: flex;
+    font-size: 120%;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+
+.battle>.battleBox .section_1{
+    display: grid;
+    margin: 5px;
+    grid-template-columns: 2fr 3fr;
+}
+.battle>.battleBox a{
+    text-decoration: none;
+    color: black;
+}
+.battle>.battleBox .img{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.battle>.battleBox .img>img{
+    border-radius: 10px;
+}
+.battle>.battleBox .info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.battle>.battleBox .info span{
+    display: block;
+}
+.battle>.battleBox .info #teamMode{
+    font-size: 115%;
+    letter-spacing: 1.5px;
+}
+.battle>.battleBox .info #time{
+    letter-spacing: 1px;
+    text-align: center;
+}
+.battle>.battleBox .info #organiser{
+    font-size: 70%;
+    letter-spacing: 3.4px;
+}
+
+
+.battle>.battleBox .section_2{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.battle>.battleBox .footer{
+    margin-top: -15px;
+}
+.battle>.battleBox .footer .outliner{
+    height: 5px;
+    border-radius: 50px;
+    background-color: #ffded3;
+}
+.battle>.battleBox .footer .count{
+    width: 30%;
+    height: 5px;
+    border-radius: 50px;
+    background: #ff4400;
+}
+
+.battle>.battleBox .winner{
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: block; */
+    font-size: 200%;
+    color: #3d4f5a;
+}
+
+
+.battle a{
+    text-decoration: none;
+}
+.btn{
+    display: grid;
+    /* top: -90px; */
+    padding-left: 10px;
+    /* position: relative; */
+    margin-top: -90px;
+    grid-template-columns: 2fr 3fr;
+}
+.joinBtn{
+    text-align: center;
+    background-color: #ff5b20;
+    margin: auto;
+    color: white;
+    padding: 4px 25px;
+    box-shadow: 2px 2px 4px gray;
+    border-radius: 10px;
+    max-width: fit-content;
+}
+.joinBtn span{
+    display: block;
+}

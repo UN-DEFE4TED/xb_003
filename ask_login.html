@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        }
+        .ask_login{
+            padding: 20px;
+            max-width: max-content;
+        }
+        #ask_login_span{
+            font-size: 120%;
+            font-weight: 600;
+            color: #3a4448;
+        }
+        #ask-fa-triangle-exclamation{
+            font-size: 150%;
+            color: #ff5500;
+            padding-right: 10px;
+        }
+        #ask_login_href{
+            display: block;
+            text-align: end;
+            font-size: 130%;
+            font-weight: 600;
+            padding-top: 10px;
+            margin-right: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ask_login">
+        <div><i class="fa-solid fa-triangle-exclamation" id="ask-fa-triangle-exclamation"></i><span id="ask_login_span">Please Login to Continue...</span></div>
+        <div id="ask_login_href"><a href="/login">Log in</a></div>
+    </div>
+</body>
+</html>

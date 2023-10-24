@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style/signup.css">
+    <title>Document</title>
+</head>
+<body>
+    <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+    <div class="signup">
+        <div class="img">
+            <img src="img/signup.png" alt="image" height="90%">
+        </div>
+        <div class="form">
+            <span id="text">Sign up</span>
+            <form action="" method="post">
+                <div class="pg_1">
+                    <div><i class="fa-solid fa-file-signature"></i><input type="text" name="name" id="name" placeholder="name" required></div>
+                    <div><i class="fa-solid fa-file-signature"></i><input type="number" name="ffuid" id="ffuid" placeholder="free fire uid" required></div>
+                    <div><i class="fa-solid fa-file-signature"></i><input type="number" name="confirmFfuid" id="ffuid" placeholder="confirm ff uid" required></div>
+                </div>
+                <div class="pg_2">
+                    <div><i class="fa-solid fa-phone"></i><input type="tel" name="phone" id="phone" placeholder="phone" minlength="10" required></div>
+                    <div><i class="fa-solid fa-envelope"></i><input type="email" name="mail" id="mail" placeholder="email" required></div>
+                    <div><i class="fa-solid fa-lock"></i><input type="text" name="password" id="password" placeholder="password" minlength="8" required></div>
+                    <div><i class="fa-solid fa-lock"></i><input type="text" name="confirmPassword" id="password" placeholder="confirm password" minlength="8" required></div>
+                </div>
+                <div class="pg_3">
+                    <div><i class="fa-solid fa-phone"></i><input type="number" name="phoneOTP" id="password" placeholder="enter otp sent on mobile" minlength="8"></div>
+                    <div><i class="fa-solid fa-envelope"></i><input type="number" name="mailOTP" id="password" placeholder="enter otp sent on email" minlength="8"></div>
+                </div>
+                <div class="login"><a href="/login">Log in</a></div>
+                <div class="next_btn">
+                    <a onclick="next_btn('on_2', 'on_1', 'pg_2', 'pg_1')" class="next on_1" id="next_1" ><i class="fa-solid fa-arrow-right"></i></a>
+                    <a onclick="next_btn('on_1', 'on_2', 'pg_1', 'pg_2')" class="prev on_2" id="prev_1" style="display:none;"><i class="fa-solid fa-arrow-left"></i></a>
+                    <a onclick="next_btn('on_3', 'on_2', 'pg_3', 'pg_2')" class="next on_2" id="next_2" style="display:none;"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a onclick="next_btn('on_2', 'on_3', 'pg_2', 'pg_3')" class="prev on_3" id="prev_2" style="display:none;"><i class="fa-solid fa-arrow-left"></i></a>
+                    <div class="submit_btn on_3" style="display:none;"><button type="submit">Submit</button></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script/signup.js"></script>
+</body>
+</html>

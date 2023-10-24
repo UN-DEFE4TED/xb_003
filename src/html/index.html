@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/query.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/battle.css">
+    <link rel="stylesheet" href="style/asklogin.css">
+    <title>XstreamBattle | FreeFire</title>
+</head>
+<body>
+    <!--$[username]-->
+    <div class="sidenav query_500">
+        <i onclick="closeSidenav()" class="fa-solid fa-xmark"></i>
+        <div class="profile">
+            <div class="login">
+                <div class="<!--$[xlogin]-->"><a href="/login"><i class="fa-solid fa-circle-user"></i>  Log in</a></div>
+            </div>
+            <div class="img <!--$[xlogin]-->"><img src="img/<!--$[userprofile]-->.png" alt="image"></div>
+            <a class="<!--$[xlogin]-->" href="/profile"><div class="id"><div class="name"><!--$[username]--></div><div class="uid"><!--$[userid]--></div></div></a>
+        </div>
+        <a class="<!--$[active-H]-->" href="/"><i class="fa-solid fa-home"></i> Home</a>
+        <a class="<!--$[active-C]-->" href="/contest"><i class="fa-solid fa-cart-shopping"></i> Contest</a>
+        <a class="<!--$[active-F]-->" href="/friend"><i class="fa-solid fa-user-group"></i> Friends</a>
+        <a class="<!--$[active-N]-->" href="/notification"><i class="fa-solid fa-bell"></i> Notification</a>
+        <a class="<!--$[active-P]-->" href="/profile"><i class="fa-solid fa-user"></i> Profile</a>
+        <a class="<!--$[active-T]-->" href="/tournament"><i class="fa-solid fa-trophy"></i> Tournament</a>
+        <a class="<!--$[active-L]-->" href="/leaderboard"><i class="fa-solid fa-square-poll-vertical"></i> Leaderboard</a>
+        <a class="<!--$[active-R-->" href="/refer"><i class="fa-solid fa-arrow-up-from-bracket"></i> Refrals</a> 
+        <a class="<!--$[active-S]-->" href="/support"><i class="fa-solid fa-phone-volume"></i> Support</a>
+        <a class="<!--$[active-A]-->" href="/about"><i class="fa-solid fa-angle-right"></i> About us</a>
+        <a class="<!--$[active-TAC]-->" href="/tac"><i class="fa-solid fa-angle-right"></i> term and condition</a>
+    </div>
+    <div class="nav_500_1">
+    <div class="nav_500 nav_query-500">
+        <i onclick="openSidenav()" class="fa-solid fa-bars"></i>
+        <span>
+            <a href="/support"><i class="fa-solid fa-headset"></i></a>
+            <a href="/notification"><i class="fa-solid fa-bell"></i></a>
+            <a href="/profile"><i class="fa-solid fa-circle-user"></i></a>
+        </span>
+    </div></div>
+    <div class="footer_500_1 footer_query-500">
+        <div class="footer_500">
+            <a href="/tournament"><i class="fa-solid fa-trophy <!--$[active-T]-->"></i></a>
+            <a href="/contest"><i class="fa-solid fa-cart-shopping <!--$[active-C]-->"></i></a>
+            <a href="/"><i class="fa-solid fa-home <!--$[active-H]-->"></i></a>
+            <a href="/friend"><i class="fa-solid fa-user-group <!--$[active-F]-->"></i></a>
+            <a href="/leaderboard"><i class="fa-solid fa-square-poll-vertical <!--$[active-L]-->"></i></a>
+        </div>
+    </div>
+    <div class="index">
+        <!--$[index]-->
+    </div>
+ 
+<script>
+    let sidenav = document.getElementsByClassName('sidenav')[0];
+    let body = document.getElementsByTagName('body')[0];
+    let closeSidenav = ()=>{
+        sidenav.style.left = '-280px';
+    }
+    let openSidenav = ()=>{
+        sidenav.style.left = '0px';
+    }
+    const battle = document.querySelectorAll('.battles>.battle');
+    const BattleRoyal = document.querySelectorAll('.battles>.br');
+    const ClashSquad = document.querySelectorAll('.battles>.cs');
+    const filterBtn = document.querySelectorAll('.filter-battle>button')
+    const filterAll = ()=>{
+        filterBtn.forEach(element => {
+            element.classList.remove('active')
+        });
+        filterBtn[0].classList.add('active')
+        battle.forEach(element => {
+            element.style.display = 'block'
+        });
+    }
+    const filterBr = ()=>{
+        filterBtn.forEach(element => {
+            element.classList.remove('active')
+        });
+        filterBtn[1].classList.add('active')
+        battle.forEach(element => {
+            element.style.display = 'none'
+        });
+        BattleRoyal.forEach(element => {
+            element.style.display = 'block'
+        });
+    }
+    const filterCs = ()=>{
+        filterBtn.forEach(element => {
+            element.classList.remove('active')
+        });
+        filterBtn[2].classList.add('active')
+        battle.forEach(element => {
+            element.style.display = 'none'
+        });
+        ClashSquad.forEach(element => {
+            element.style.display = 'block'
+        });
+    }
+</script>
+</body>
+</html>

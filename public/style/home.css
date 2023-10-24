@@ -1,0 +1,40 @@
+
+.event-dashboard{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.event-dashboard>.img{
+    height: 130px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #075697;
+}
+.filter-battle{
+    padding: 10px 15px;
+    display: flex;
+    position: sticky;
+    top: 46px;
+    background: white;
+    justify-content: end;
+    border-bottom: 3px solid #bdbdbd;
+}
+.filter-battle button{
+    margin:0 2px;
+    border: none;
+    font-size: 90%;
+    cursor: pointer;
+    min-width: 70px;
+    padding: 4px 15px;
+    border-radius: 10px;
+    background: #d6d6d6;
+}
+.filter-battle>.active{
+    color: white;
+    background: #075697;
+}
+.battles{
+    display: grid;
+    padding:  10px;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}

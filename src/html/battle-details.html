@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>XstreamBattle | FreeFire</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Itim', cursive;
+        }
+        .battle-details{
+            max-width: 520px;
+        }
+        .battle-details>.img>img{
+            filter: brightness(0.8);
+        }
+        .battle-details .joinBtn_1:hover{
+            .btn{
+                background-color: #ff5454;
+            }
+        }
+        .battle-details .joinBtn_1{
+            position: fixed;
+            bottom: 30px;
+            width: 100vw;
+        }
+        .battle-details .joinBtn_1>a{
+            text-decoration: none;
+        }
+        .battle-details .joinBtn_1 .joinBtn{
+            margin: 10px;
+            background-color: #ac1818;
+            padding: 10px;
+        }
+        .battle-details .btn{
+            border-radius: 7px;
+            height: 40px;
+            color: white;
+            display: grid;
+            font-size: 120%;
+            place-items: center;
+            background-color: #e40101;
+        }
+        .battle-details .br .cs{
+            display: none;
+        }
+        .battle-details .cs .br{
+            display: none;
+        }
+        .battle-details .section{
+            padding: 10px;
+        }
+        .battle-details .section .master{
+            padding-bottom: 5px;
+            border-bottom: 2px solid #cacaca;
+        }
+        .battle-details .section .master .info{
+            display: block;
+        }
+        .battle-details .section .info>span:nth-child(1){
+            display: inline-block;
+            width: 250px;
+            padding: 5PX;
+        }
+        .battle-details .section .master .info>span:nth-child(1){
+            display: inline-block;
+            width: 200px;
+            padding: 5PX;
+        }
+        .battle-details .section .main{
+            margin-top: 10px;
+            margin-bottom: 120PX;
+        }
+
+        .battle-details .winner{
+            margin-bottom: 10px;
+            border-bottom: 2px solid rgb(182, 182, 182);
+        }
+        .battle-details .winner>span{
+            font-size: 120%;
+            display: block;
+            color: #ff0000;
+            padding-bottom: 10px;
+        }
+        .battle-details .winner .info>span:nth-child(1){
+            width: 100px;
+        }
+        .battle-details .winner .id{
+            font-size: 150%;
+            color: rgb(0, 153, 255);
+            position: relative;
+            max-width: max-content;
+            left: 240px;
+            bottom: 137px;
+
+        }
+        .fa-arrow-left{
+            top: 20px;
+            z-index: 1;
+            left: 20px;
+            font-size: 130%;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+        }
+        </style>
+ </head>
+ <body>
+    <div class="battle-details">
+        <i onclick="history.back()" class="fa-solid fa-arrow-left"></i>
+        <div class="img"><img src="img/<!--$[map]-->.png" alt="image" width="100%"></div>
+        <div class="section <!--$[battleMode]-->">
+            <div class="winner">
+                <span class="info"><span>TOP 1 :</span><span>₹ <!--$[_1]--></span></span>
+                <span class="info"><span>TOP 2 :</span><span>₹ <!--$[_2]--></span></span>
+                <span class="info"><span>TOP 3 :</span><span>₹ <!--$[_3]--></span></span>
+                <div class="id">Id : &nbsp; #<!--$[id]--></div>
+            </div>
+            <div class="master">
+                <span class="info"><span>TEAM MODE :</span><span><!--$[teamMode]--></span></span>
+                <span class="info"><span>AMMO :</span><span><!--$[ammo]--></span></span>
+                <span class="info"><span>MAP :</span><span><!--$[map]--></span></span>
+                <span class="info"><span>GUN-ATTRIBUTES :</span><span><!--$[gunAttributes]--></span></span>
+                <span class="info"><span>CHARACTER-SKILL :</span><span><!--$[characterSkill]--></span></span>
+                <span class="info"><span>GAME MODE :</span><span><!--$[gameMode]--></span></span>
+                <span class="info"><span>CONDUCTED ON :</span><span><!--$[month]--> <!--$[date]-->, <!--$[year]--> | <!--$[hour]-->:<!--$[minutes]--></span></span>
+            </div>
+            <div class="main">
+                <span class="info"><span>ROOM ID :</span><span><!--$[roomId]--></span></span>
+                <span class="info"><span>ROOM PASS :</span><span><!--$[roomPass]--></span></span>
+                <span class="info"><span>TEAM :</span><span><!--$[slots]--></span></span>
+                <span class="info"><span>MIN-LVL :</span><span>54</span></span>
+                <span class="info"><span>PRESET MODE :</span><span><!--$[presetMode]--></span></span>
+                <span class="info cs"><span>ROUND :</span><span><!--$[round]--></span></span>
+                <span class="info cs"><span>DEFAULT COIN :</span><span><!--$[coin]--></span></span>
+                <span class="info cs"><span>RANDOM BUFF :</span><span><!--$[randomBuff]--></span></span>
+                <span class="info cs"><span>CYBER AIRDROP :</span><span><!--$[cyberAirdrop]--></span></span>
+                <span class="info br"><span>REVIVAL :</span><span><!--$[revival]--></span></span>
+                <span class="info"><span>HP :</span><span><!--$[hp]--></span></span>
+                <span class="info"><span>MOVEMENT SPEED :</span><span><!--$[movementSpeed]-->%</span></span>
+                <span class="info"><span>JUMP HEIGHT :</span><span><!--$[jumpHeight]-->%</span></span>
+                <span class="info"><span>ENVIRONMENT :</span><span><!--$[environment]--></span></span>
+                <span class="info"><span>LIMITED AMMO :</span><span><!--$[limitedAmmo]--></span></span>
+                <span class="info"><span>FALL DAMAGE :</span><span><!--$[fallDamage]--></span></span>
+                <span class="info br"><span>AUTO REVIVAL :</span><span><!--$[autoRevival]--></span></span>
+                <span class="info"><span>AIRDROP :</span><span><!--$[airdrop]--></span></span>
+                <span class="info br"><span>ZONE-SHRINK-SPEED :</span><span><!--$[zoneShrinkSpeed]--></span></span>
+                <span class="info br"><span>VEHICLES :</span><span><!--$[vehicles]--></span></span>
+                <span class="info br"><span>OUT-OF-ZONE-DAMAGE :</span><span><!--$[outOfZoneDamage]--></span></span>
+                <span class="info br"><span>UAV :</span><span><!--$[uav]--></span></span>
+                <span class="info br"><span>AIRSTRIKE :</span><span><!--$[airstrike]--></span></span>
+                <span class="info br"><span>AIRSHIP :</span><span><!--$[airship]--></span></span>
+                <span class="info"><span>GENERIC-ENEMY-OUTFIT :</span><span><!--$[genericEnemyOutfit]--></span></span>
+                <span class="info"><span>HIDE-TEAMMATE-NICKNAME :</span><span><!--$[hideTeammateNickname]--></span></span>
+                <span class="info"><span>FRIENDLY FIRE :</span><span><!--$[friendlyFire]--></span></span>
+                <span class="info"><span>PRECISE AIM :</span><span><!--$[preciseAim]--></span></span>
+                <span class="info"><span>CHARACTER-SKILL :</span><span><!--$[characterSkill]--></span></span>
+                <span class="info"><span>LOADOUT :</span><span><!--$[loadout]--></span></span>
+                <span class="info"><span>GUN-ATTRIBUTES :</span><span><!--$[gunAttributes]--></span></span>
+                <span class="info"><span>IN-GAME-MISSION :</span><span><!--$[inGameMission]--></span></span>
+                <span class="info br"><span>IN-MATCH-QUESTS :</span><span><!--$[inMatchQuest]--></span></span>
+            </div>
+        </div>
+
+
+        <div class="joinBtn_1">
+            <a href="$$$"><div class="joinBtn">
+                <div class="btn">Join Now ₹<!--$[entry]--></div>
+            </div></a>
+        </div>
+    </div>
+ </body>
+ </html>

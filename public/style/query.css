@@ -1,0 +1,11 @@
+@media (max-width: 500px){
+    .fa-xmark{display: block;}
+    .query_500{left: -280px;}
+    .index{margin-top: 50px; margin-bottom: 50px;}
+    .nav_query-500{display: flex;}
+    .footer_query-500{display: block;}
+}
+@media(min-width: 500px){
+    .index{margin-left: 280px;}
+    .query_500{display: flex;}
+}
