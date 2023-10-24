@@ -1,5 +1,5 @@
 
-# XstreamBattle Tournament 2
+# XstreamBattle Tournament 
 
 A brief description of what this project does and who it's for
 
